@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.2",
+  "contentVersion": "1.0.0.0",
   "parameters": {
     "lbName": {
       "type": "string",
@@ -255,7 +255,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('SettingUpPublicIPUrl')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "location": {
@@ -288,7 +288,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('setupNICsURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "location": {
@@ -338,7 +338,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('vmTemplateUrl')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "location": {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.2",
+  "contentVersion": "1.0.0.0",
   "parameters": {
     "networkSecurityGroupName": {
       "type": "string",
@@ -251,7 +251,7 @@
     "rgname" : "[resourceGroup().name]",
     "LoadBalancerType" : "layer-7",
     "firewallVmCount" : 2,
-    "baseUrl" : "https://raw.githubusercontent.com/chanduusc/azure-lb2/master/",
+    "baseUrl" : "https://raw.githubusercontent.com/PaloAltoNetworks/azure-applicationgateway/master/",
     "nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
     "vnetURL" : "[concat(variables('baseUrl'),'/vnet-', parameters('virtualNetworkNewOrExisting'),'.json')]",
     "publicLBURL" : "[concat(variables('baseUrl'),'/public-lb-', variables('LoadBalancerType'), '.json')]",
@@ -268,7 +268,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('nsgURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "location": {
@@ -297,7 +297,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('vnetURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "nsgName": {
@@ -350,7 +350,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('storageAccountSetupURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "location": {
@@ -376,7 +376,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('vmseriesURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "lbName": {
@@ -466,7 +466,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('publicLBURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "lbName": {
@@ -499,7 +499,7 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "[variables('privateLBURL')]",
-          "contentVersion": "1.0.0.2"
+          "contentVersion": "1.0.0.0"
         },
         "parameters": {
           "storageAccountName": {
